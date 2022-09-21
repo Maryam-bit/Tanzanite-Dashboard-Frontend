@@ -1,20 +1,20 @@
 import React from "react"
 import {
     BrowserRouter as Router,
-    Switch,
+    Routes,
     Route,
     Link
   } from "react-router-dom";
-import Signup from '../pages/Signup';
-import Abc from '../pages/Abc';
+import { Signup } from "../pages/Signup.jsx";
+import { Testing } from "../pages/testing.jsx";
 
 export default function AppRouter () {
     return (
         <Router>
-            <Switch>
-                <Route path="/" component={Signup} exact />
-                <Route path="/abc" component={Abc} />
-            </Switch>
+            <Routes>
+                <Route path="/" element={<Signup/>} exact />
+                <Route path="/testing" element={<Testing/>} />
+            </Routes>
         </Router>
     )
 }
