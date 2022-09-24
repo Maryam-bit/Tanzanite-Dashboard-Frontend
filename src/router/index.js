@@ -3,9 +3,9 @@ import {
     BrowserRouter as Router,
     Routes,
     Route,
-    Link
   } from "react-router-dom";
 import { Signup } from "../pages/Signup.jsx";
+import { Signin } from "../pages/Signin.jsx";
 import { Testing } from "../pages/testing.jsx";
 
 export default function AppRouter () {
@@ -13,6 +13,7 @@ export default function AppRouter () {
         <Router>
             <Routes>
                 <Route path="/" element={<Signup/>} exact />
+                <Route path="/signin" element={<Signin/>} exact />
                 <Route path="/testing" element={<Testing/>} />
             </Routes>
         </Router>
