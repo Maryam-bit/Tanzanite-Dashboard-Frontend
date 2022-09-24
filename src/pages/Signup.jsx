@@ -1,32 +1,29 @@
-import React from "react";
-import { Center, Box, Button, FormControl, FormLabel, Input, Flex } from "@chakra-ui/react";
+import React, { useState } from "react";
+import axios from 'axios';
+import  { Form } from "../stories/forms/Form.jsx"
+import { useNavigate } from "react-router-dom";
 
 export const Signup = () => {
+    const [username, setUserName] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    let navigate = useNavigate();
+
+    async function fetchData(e) {
+        e.preventDefault()
+        console.log("fetchData called")
+        const response = await axios.post('http://localhost:5000/api/v1/users/signup', {
+            username: username,
+            email: email,
+            password: password,
+        })
+        console.log(response)
+        localStorage.setItem('token', response.data.token)
+        navigate("/signin");
+      }
     return (
         <>
-        <Flex display='flex' alignItems='center' justifyContent='center' h='100%'>
-            <Center>
-                <Box p='6' borderWidth='1px' borderRadius='lg' boxShadow='md'>
-                    <Center>
-                        <form>
-                            <FormControl>
-                                <FormLabel>Full Name</FormLabel>
-                                <Input type='text' />
-                            </FormControl>
-                            <FormControl>
-                                <FormLabel>Email</FormLabel>
-                                <Input type='email' />
-                            </FormControl>
-                            <FormControl>
-                                <FormLabel>Password</FormLabel>
-                                <Input type='password' />
-                            </FormControl>
-                        </form>
-                    </Center>
-                    <Button colorScheme='blue' float='right' type="submit" my='3'>Signup</Button>
-                </Box>
-            </Center>
-        </Flex>
+            <Form onSubmit={fetchData} setPassword={setPassword} setEmail={setEmail} setUserName={setUserName} type="signup" label="Sign up" />
         </>
     )
 }
