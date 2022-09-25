@@ -1,8 +1,8 @@
 @mixin text($font-family, $font-size: 14, $font-weight: 400, $color: 'black') {
-  color: $color;
-  font-weight: $font-weight;
-  font-family: $font-family;
-  font-size: $font-size;
+  color: $color !important;
+  font-weight: $font-weight !important;
+  font-family: $font-family !important;
+  font-size: $font-size !important;
 }
 
 @mixin text-group-based-on-size ($xsm, $sm, $md, $lg, $xl, $xxl) {

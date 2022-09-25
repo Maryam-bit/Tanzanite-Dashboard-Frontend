@@ -10,6 +10,9 @@ body {
     height: 100vh;
   }
 }
+* {
+  @include text-group-based-on-size(10px, 13px, 15px, 19px, 26px, 40px);
+}
 
 .text-small {
   @include text-group-based-on-size(10px, 13px, 15px, 19px, 26px, 40px);
