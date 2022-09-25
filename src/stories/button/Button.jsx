@@ -11,7 +11,7 @@ export const TheButton = ({ colorScheme, backgroundColor, shape, size, label, ..
   return (
     <ChakraProvider>
       <Button
-      className='app-button'
+      className='app-button text-sm'
         type="button"
         colorScheme={colorScheme}
         style={backgroundColor && { backgroundColor }}

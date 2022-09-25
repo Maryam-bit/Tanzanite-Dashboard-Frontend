@@ -1,6 +1,8 @@
+@import "./variable.scss";
+
 @mixin theme-color1 () {
     .app-button {
-        background-color: red;
+        background-color: $theme-color1;
     }
 }
 
