@@ -1,9 +1,9 @@
 import React from "react";
-import { Center, Box, Button, FormControl, FormLabel, Input, Flex, Heading } from "@chakra-ui/react";
+import { Center, Box, FormControl, FormLabel, Input, Flex, Heading } from "@chakra-ui/react";
 import '../../assets/scss/main.scss';
 import { ChakraProvider } from '@chakra-ui/react'
 import PropTypes from 'prop-types';
-
+import { TheButton } from '../button/Button.jsx';
 
 export const Form = ({onSubmit, setUserName, setEmail, setPassword, type, label}) => {
     return (
@@ -32,7 +32,7 @@ export const Form = ({onSubmit, setUserName, setEmail, setPassword, type, label}
                                         <FormLabel>Password</FormLabel>
                                         <Input required type='password' onChange={(e) => setPassword(e.target.value)} />
                                     </FormControl>
-                            <Button colorScheme='blue' float='right' type="submit" my='3'>{label}</Button>
+                                    <TheButton label={label} type='submit' float="right" my="3" />
                                 </form>
                             </Center>
                         </Box>
