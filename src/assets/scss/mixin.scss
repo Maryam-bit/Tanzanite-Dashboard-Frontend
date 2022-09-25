@@ -1,0 +1,28 @@
+@mixin text($font-family, $font-size: 14, $font-weight: 400, $color: 'black') {
+  color: $color;
+  font-weight: $font-weight;
+  font-family: $font-family;
+  font-size: $font-size;
+}
+
+@mixin text-group-based-on-size ($sm, $md, $lg, $xl, $xxl) {
+  .text-sm {
+    @include text(null, $sm, 400, null)
+  }
+
+  .text-md {
+    @include text(null, $md, 400, null)
+  }
+
+  .text-lg {
+    @include text(null, $lg, 400, null)
+  }
+
+  .text-xlg {
+    @include text(null, $xl, 400, null)
+  }
+
+  .text-xxlg {
+    @include text(null, $xxl, 400, null)
+  }
+}

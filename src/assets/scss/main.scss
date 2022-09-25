@@ -1,10 +1,48 @@
 @import "./variable.scss";
 @import "./responsive.scss";
 @import "./mixin.scss";
+@import "./mode.scss";
+@import "./theme.scss";
 
 body {
   height: 100vh; 
-  .App, #root {
+  .app-container, .App, #root {
     height: 100vh;
   }
+}
+
+.text-small {
+  @include text-group-based-on-size(10px, 12px, 16px, 22px, 30px);
+}
+
+.text-medium {
+  @include text-group-based-on-size(12px, 14px, 18px, 24px, 33px);
+}
+
+.text-large {
+  @include text-group-based-on-size(13px, 17px, 21px, 28px, 38px);
+}
+
+.dark-mode {
+  @include dark-mode()
+}
+
+.theme-color1 {
+  @include theme-color1()
+}
+
+.theme-color2 {
+  @include theme-color1()
+}
+
+.theme-color3 {
+  @include theme-color1()
+}
+
+.theme-color4 {
+  @include theme-color1()
+}
+
+.theme-color5 {
+  @include theme-color1()
 }

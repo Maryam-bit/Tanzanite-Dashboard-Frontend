@@ -1,0 +1,29 @@
+@mixin theme-color1 () {
+    .app-button {
+        background-color: red;
+    }
+}
+
+@mixin theme-color2 () {
+    .app-button {
+        background-color: green;
+    }
+}
+
+@mixin theme-color3 () {
+    .app-button {
+        background-color: blue;
+    }
+}
+
+@mixin theme-color4 () {
+    .app-button {
+        background-color: yellow;
+    }
+}
+
+@mixin theme-color5 () {
+    .app-button {
+        background-color: darkorchid;
+    }
+}
