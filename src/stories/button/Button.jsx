@@ -3,6 +3,7 @@ import React from 'react';
 import { ChakraProvider } from '@chakra-ui/react'
 import { Button } from "@chakra-ui/react";
 import PropTypes from 'prop-types';
+import '../../assets/scss/main.scss';
 
 /**
  * Primary UI component for user interaction
@@ -15,7 +16,7 @@ export const TheButton = ({ colorScheme, backgroundColor, shape, size, label, ..
         type="button"
         colorScheme={colorScheme}
         style={backgroundColor && { backgroundColor }}
-        borderRadius={shape=="rounded" ? 'full' : shape=="slightlyRounded" ? 'md' : 'none' }
+        borderRadius={shape === "rounded" ? 'full' : shape === "slightlyRounded" ? 'md' : 'none' }
         p='5'
         fontSize={size}
         {...props}
