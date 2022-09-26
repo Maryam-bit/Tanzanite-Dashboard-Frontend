@@ -10,4 +10,4 @@ jobs:
         with:
           pattern: '\[[A-Z]{3,7}]\: [\w\s]+$'
           flags: 'gm'
-          error: 'Your first line has to contain a commit type like "[BUGFIX]".'
+          error: 'Your first line has to contain a commit type like [BUGFIX]. Your msg here'
