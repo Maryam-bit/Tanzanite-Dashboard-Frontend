@@ -5,7 +5,7 @@ jobs:
     name: Check Commit Message  
     runs-on: ubuntu-latest
     steps: 
-      -name: "Commit messages convention"
+      - name: "Commit messages convention"
       uses: gsactions/commit-message-checker@v1
       with: 
         pattern: '\[[^]]+\] .+$'
